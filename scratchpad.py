@@ -1,5 +1,13 @@
 import pyinputplus as pyip
 
-response = pyip.inputNum(prompt="enter num : ",allowRegexes=[r'(I|V|X|L|C|D|M)+', r'zero'])
+def addsUpToTen(numbers):
+  numbersList = list(numbers)
+  for i, digit in enumerate(numbersList):
+    numbersList[i] = int(digit)
+  
+  if sum(numbersList) != 10:
+    raise Exception(f'digits must add up to 10, not {sum(numbersList)}')
 
-print(response)
+  return int(numbers)
+
+response = pyip.inputCustom(addsUpToTen)
