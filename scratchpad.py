@@ -1,19 +1,5 @@
-while True:
-  print('enter your age')
+import pyinputplus as pyip
 
-  age = input()
+response = pyip.inputInt(prompt='enter a number : ', limit=2, default='n/a')
 
-  try:
-    age = int(age)
-  
-  except: 
-    print('please use numeric digits')
-    continue
-
-  if age < 1:
-    print('please enter a positive number')
-    continue
-
-  break
-
-print(f'your age is {age}')
+print(response)
