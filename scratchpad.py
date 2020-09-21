@@ -1,5 +1,5 @@
 import pyinputplus as pyip
 
-response = pyip.inputInt(prompt='enter a number : ', limit=2, default='n/a')
+response = pyip.inputNum(prompt="enter num : ",allowRegexes=[r'(I|V|X|L|C|D|M)+', r'zero'])
 
 print(response)
